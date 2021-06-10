@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="tip-calculator-body">
+        <header class="header">
+            <h2>Tip Calculator</h2>
+        </header>
+
+        <div class="block1">
+            <p>How much was your bill ?</p>
+            <input type="number" min="1" max="50000" id="billamount" placeholder="Enter bill amount">
+        </div>
+
+        <div class="block2">
+            <p>How was service quality?</p>
+            <select name="servqual" id="servicequality">
+                <option value="0">Bad 0%</option>
+                <option value="0.05" selected>Good 5%</option>
+                <option value="10">Best 10%</option>
+                <option value="20">Amazing 20%</option>
+            </select>
+        </div>
+
+        <div class="block3">
+            <p> How many people sharing the bill?</p>
+            <div class="btndiv">
+               
+                
+                <input type="button" min="1" max="1" id="dec" value="-" onclick="dec()">
+                <input type="number" class="getpeople" id="cvalue" value="1" min="1">
+                <input type="button" min="1" max="50" id="inc" value="+" onclick="inc()">
+                
+            </div>
+
+            <div class="block4">
+                <button onclick="get()" class="calculatebtn">Calculate</button>
+            </div>
+
+            <div class="block5">
+                <p id="result"></p>
+            </div>
+        </div>
+
+        <script src="engine.js"></script>
+</body>
+
+</html>

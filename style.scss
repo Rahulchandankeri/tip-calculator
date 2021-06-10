@@ -1,0 +1,159 @@
+$fontcolor: #1A1C1E;
+$font: 'Baloo Tammudu 2', cursive;
+$x1font: 1.1rem; 
+$x2font: 1.4rem; 
+$primarycolor: #FFD60A;
+
+@mixin margap {
+    margin: 10% auto auto auto;
+    width: 90%;
+    
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font;
+    font-size: $x1font;
+}
+
+.tip-calculator-body{
+    display: block;
+    margin: 05% auto auto auto;
+    background: #fff;
+    color: $fontcolor;
+    width: 600px;
+    padding: 0 0 20px 0;
+    max-width: 85%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+    p{
+        text-align: center;
+        font-size: $x1font;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+
+    .header{
+        height: 08vh;
+        font-size: $x1font;
+        background: $primarycolor;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+  
+    .block1{
+        @include margap();
+
+        input[type=number]{
+            display: block;
+            border: 1px solid $primarycolor;
+            height: 30px;
+            width: 100%;
+            margin: auto;
+            text-align: center; 
+        }
+        input[type=number]:focus{
+            outline: 1px solid $primarycolor;
+        }
+    }
+    .block2{
+        @include margap();
+       
+
+       select{
+           display: block;
+        margin: auto;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid $primarycolor;
+    
+       }
+  
+        select:focus{
+            outline: 1.3px solid $primarycolor;
+        }
+    }
+
+    .block3{  
+        @include margap();
+        
+        .btndiv{    
+            height: 40px;
+            margin: auto;
+            width: 53%;   
+
+            @mixin  btnid {
+            border: none;
+            padding: 10px;
+            width: 40px;
+            font-size: $x1font;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 32px;
+                
+            }
+
+        #dec{
+            @include btnid();
+            background: #FF4E4E;
+            
+        }
+        input[type=number]{
+            background: #fff;
+            border: none;
+            outline: none;
+            text-align: center;
+            height:100%;                 
+        }
+        #inc{
+            @include btnid();
+            background: #3AA515;
+            
+        }
+    }
+
+    }
+
+    .block4 {
+        @include margap();
+
+        .calculatebtn{
+            display: block;
+            width: 196px;
+            height: 46px;
+            background: $primarycolor;
+            border: none;
+            margin: auto;
+            cursor: pointer;
+            font-size: $x1font
+        }
+    }
+
+    .block5{
+        @include margap();
+    }
+
+    @media screen and (max-width:700px) {
+          
+        .btndiv{    
+            display: inline-block;
+            height: 40px;
+            margin: auto;
+            width: 53%;
+      
+        
+    }
+}
+}
