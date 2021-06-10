@@ -1,6 +1,6 @@
 $fontcolor: #1A1C1E;
 $font: 'Baloo Tammudu 2', cursive;
-$x1font: 1.1rem; 
+$x1font: 1.2rem; 
 $x2font: 1.4rem; 
 $primarycolor: #FFD60A;
 
@@ -28,7 +28,7 @@ body{
     width: 600px;
     padding: 0 0 20px 0;
     max-width: 85%;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
 
     p{
         text-align: center;
@@ -62,6 +62,7 @@ body{
             width: 100%;
             margin: auto;
             text-align: center; 
+            font-size: $x1font;
         }
         input[type=number]:focus{
             outline: 1px solid $primarycolor;
@@ -70,15 +71,13 @@ body{
     .block2{
         @include margap();
        
-
        select{
-           display: block;
+        display: block;
         margin: auto;
         width: 200px;
         text-align: center;
         padding: 10px;
         border: 1px solid $primarycolor;
-    
        }
   
         select:focus{
@@ -114,6 +113,7 @@ body{
             background: #fff;
             border: none;
             outline: none;
+            font-size: $x1font;
             text-align: center;
             height:100%;                 
         }
@@ -143,6 +143,9 @@ body{
 
     .block5{
         @include margap();
+    }
+    #result{
+        font-weight: bold;
     }
 
     @media screen and (max-width:700px) {
