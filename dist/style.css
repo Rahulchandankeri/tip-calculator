@@ -31,7 +31,7 @@ body {
   background: #FFD60A;
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .tip-calculator-body input::-webkit-outer-spin-button,
 .tip-calculator-body input::-webkit-inner-spin-button {
