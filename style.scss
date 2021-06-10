@@ -88,12 +88,8 @@ body{
     .block3{  
         @include margap();
         
-        .btndiv{    
-            height: 40px;
-            margin: auto;
-            width: 53%;   
-
             @mixin  btnid {
+            margin: 10px;
             border: none;
             padding: 10px;
             width: 40px;
@@ -101,31 +97,29 @@ body{
             color: #fff;
             cursor: pointer;
             border-radius: 32px;
-                
             }
 
         #dec{
             @include btnid();
-            background: #FF4E4E;
-            
+            background: #FF4E4E;  
         }
         input[type=number]{
+            display: block;
+            margin: 10px auto auto auto;
             background: #fff;
             border: none;
             outline: none;
             font-size: $x1font;
+            font-weight: bold;
             text-align: center;
             height:100%;                 
         }
         #inc{
             @include btnid();
             background: #3AA515;
-            
         }
+    
     }
-
-    }
-
     .block4 {
         @include margap();
 
@@ -147,16 +141,4 @@ body{
     #result{
         font-weight: bold;
     }
-
-    @media screen and (max-width:700px) {
-          
-        .btndiv{    
-            display: inline-block;
-            height: 40px;
-            margin: auto;
-            width: 53%;
-      
-        
-    }
-}
 }
